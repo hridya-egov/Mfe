@@ -1,0 +1,39 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/egovernments/DIGIT-FRONTEND.git",
+  "author": "Jagankumar <53823168+jagankumar-egov@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-proposal-unicode-property-regex": "^7.18.6",
+    "@babel/preset-env": "7.23.9",
+    "@babel/preset-react": "7.12.10",
+    "babel-loader": "8.2.2",
+    "babel-plugin-react-html-attrs": "^3.0.5",
+    "lerna": "^7.1.5",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "5.7.3"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/App1",
+    "packages/App2"
+  ],
+  "scripts": {
+    "build": "yarn lerna run build",
+    "start": "yarn lerna run start --parallel",
+    "build:core": "cd packages/core && yarn build",
+    "build:app1": "cd packages/app1 && yarn build",
+    "build:app2": "cd packages/app2 && yarn build"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "react-i18next": "^15.0.0",
+    "single-spa": "^6.0.1"
+  }
+}
