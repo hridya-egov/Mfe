@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { createRoot } from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // Adjust the import paths to match your project structure
 const RemoteApp1 = React.lazy(() => import('../../App1/src/AppWrapper'));
@@ -30,8 +30,12 @@ const App = () => {
   );
 };
 
-// Use ReactDOM.createRoot to render the application
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ 
+    
+    <App />
+    
+  
+);
 export default App;

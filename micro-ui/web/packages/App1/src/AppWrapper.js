@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './components/Button';
-import { createRoot } from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 const App1 = () => {
   return (
@@ -11,8 +11,13 @@ const App1 = () => {
   );
 };
 
-// Use ReactDOM.createRoot to render the application
-const root = createRoot(document.getElementById('root'));
-root.render(<App1 />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ 
+    
+    <App1 />
+    
+  
+);
 
 export default App1;
